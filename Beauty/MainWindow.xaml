@@ -1,0 +1,27 @@
+﻿<Window x:Class="Beauty.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Beauty"
+        mc:Ignorable="d"
+        Title="Товары" Height="297.776" Width="793.69" Loaded="Window_Loaded" Closed="Window_Closed">
+    <Grid Margin="0,0,0,-1">
+        <DataGrid x:Name="dataGridProduct" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="201" Width="497" CanUserSortColumns="False"/>
+        <Label x:Name="label" Content="Поиск" HorizontalAlignment="Left" Margin="609,10,0,0" VerticalAlignment="Top" FontSize="18.667"/>
+        <TextBox x:Name="textBoxTitle" HorizontalAlignment="Left" Height="23" Margin="629,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136" TextChanged="textBoxTitle_TextChanged"/>
+        <Label x:Name="label1" Content="По названию" HorizontalAlignment="Left" Margin="541,43,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="По производителю" HorizontalAlignment="Left" Margin="512,74,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="comboBoxManufacturer" HorizontalAlignment="Left" Margin="629,74,0,0" VerticalAlignment="Top" Width="136" SelectedIndex="0" SelectionChanged="comboBoxManufacturer_SelectionChanged">
+            <ComboBoxItem Content="Все элементы"/>
+        </ComboBox>
+        <Label x:Name="label_Copy" Content="Сортировка" HorizontalAlignment="Left" Margin="592,93,0,0" VerticalAlignment="Top" FontSize="18.667"/>
+        <Button x:Name="buttonIncrease" Content="По возрастанию" HorizontalAlignment="Left" Margin="516,128,0,0" VerticalAlignment="Top" Width="112" Height="25" Click="buttonIncrease_Click"/>
+        <Button x:Name="buttonDecrease" Content="По убыванию" HorizontalAlignment="Left" Margin="653,128,0,0" VerticalAlignment="Top" Width="112" Height="25" Click="buttonDecrease_Click"/>
+        <Button x:Name="buttonDelete" Content="Удалить товар" HorizontalAlignment="Left" Margin="179,216,0,0" VerticalAlignment="Top" Width="132" Height="27" Click="buttonDelete_Click"/>
+        <Button x:Name="buttonEdit" Content="Редактировать товар" HorizontalAlignment="Left" Margin="26,216,0,0" VerticalAlignment="Top" Width="132" Height="27" Click="buttonEdit_Click"/>
+        <Button x:Name="buttonAdd" Content="Добавить товар" HorizontalAlignment="Left" Margin="335,216,0,0" VerticalAlignment="Top" Width="132" Height="27" Click="buttonAdd_Click"/>
+        <Button x:Name="buttonWord" Content="Вывести список товаров в Word" HorizontalAlignment="Left" Margin="541,192,0,0" VerticalAlignment="Top" Width="203" Height="27" Click="buttonWord_Click" />
+
+    </Grid>
+</Window>
